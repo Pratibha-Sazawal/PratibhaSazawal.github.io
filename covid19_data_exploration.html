@@ -33,13 +33,13 @@
 								<img src="images/covid.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1><a href="https://github.com/Pratibha-Sazawal/PortfolioProjects/blob/main/Covid_Portfolio_Project.sql"target="_blank">Covid 19 Data Exploration</a></h1>
+								<h1><a href="https://github.com/Pratibha-Sazawal/PortfolioProjects/blob/main/Covid%20Portfolio%20Project.sql"target="_blank">Covid 19 Data Exploration</a></h1>
 							</header>
 							<div class="content">
-								<p>Data exploration of global COVID 19 dataset in SQL Server.</p>
+								<p>Data exploration of global COVID 19 dataset in SQL Server</p>
 							</div>
 							<ul class="actions special">
-								<li><a href="https://github.com/Pratibha-Sazawal/PortfolioProjects/blob/main/Covid_Portfolio_Project.sql"target="_blank" class="button large">View Project</a></li>
+								<li><a href="https://github.com/Pratibha-Sazawal/PortfolioProjects/blob/main/Covid%20Portfolio%20Project.sql"target="_blank" class="button large">View Project</a></li>
 							</ul>
 						</div>
 					</section>
@@ -50,75 +50,84 @@
 						<!-- One -->
 							<section id="one">
 								<div class="inner">
-									<header class="major">
-										<h2>Sed amet aliquam</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p>In this project I have used SQL to do some data exploration on the COVID 19 data, the results of which will be visualised in Tableau in the next project. I have used the data on covid deaths (given in the table <b>CovidDeaths</b>) and covid vaccinations (given in the table <b>CovidVaccinations</b>), obtained from ourworldindata.org.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
+										<img src="images/1_1.png" alt="" data-position="center center" />
 									<div class="content">
 										<div class="inner">
-											<header class="major">
-												<h3>Orci maecenas</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>First I have looked at the number of deaths out of the total number of cases each day in India. I have only selected the data where <b>continent</b> is not a null value, since whenever it is given as a null, the corresponding value in the <b>location</b> column is replaced by the correct value for the continent, but the <b>location</b> column should contain the country names instead. The death percentage is calculated using <b>(total cases/total deaths)*100</b>. By the end of April 2021, we had <b>19,164,969</b> cases and <b>211,853</b> deaths. About 1.1% of the total population of our country died due to covid. So the likelihhood of a person dying if they contract covid is <b>1.1%</b>.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
+										<img src="images/1_2.png" alt="" data-position="center center" />
 									<div class="content">
 										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Next I have tried to estimate the percentage of the population that got covid using <b>(total cases/population)*100</b>. It can be seen that by April 30 2021, about <b>1.4%</b> of India's population was confirmed to have contracted the virus.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
+										<img src="images/1_3.png" alt="" data-position="center center" />
 									<div class="content">
 										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>I tried to find which countries have the highest infection rate compared to their population. <b>Andorra</b> was found to have the highest infection rate, with about <b>17.1%</b> of its total population been diagnosed with covid.</p>
 										</div>
 									</div>
 								</section>
+								<section>
+									<img src="images/1_4.png" alt="" data-position="center center" />
+								<div class="content">
+									<div class="inner">
+										<p>The next step was to check which country has the highest death count for its population. <b>total_deaths</b> column has nvarchar data type, so I had to first convert it to integer data type. We can see that the <b>United States</b> has had the highest death count of <b>576,232</b> deaths till the end of April 2021.</p>
+									</div>
+								</div>
+								</section>
+								<section>
+									<img src="images/1_6.png" alt="" data-position="center center" />
+								<div class="content">
+									<div class="inner">
+										<p>Next, I have looked at the total number of cases, total number of deaths and the death percentage per day globally. Since the <b>new_deaths</b> column has nvarchar data type, I first converted it to an integer. Starting with <b>98</b> total cases and <b>1</b> death on Jan 23 2020, we went on to have <b>879,014</b> total cases and <b>14,573</b> total deaths on April 30 2021. Also, the death percentage increased from <b>1%</b> to <b>1.7%</b> globally.</p>
+									</div>
+								</div>
+								</section>
+								<section>
+									<img src="images/1_7.png" alt="" data-position="center center" />
+								<div class="content">
+									<div class="inner">
+										<p>I have then tried to find out the total number of people in the world who have been vaccinated. I first joined the <b>CovidDeaths</b> and <b>CovidVaccinations</b> tables using an inner join on the <b>location (country)</b> and the <b>date</b>, and then I looked at the new vaccinations per day as well as the rolling count of the vaccinations, which is the cumulative sum of the new vaccinations for each particular country (using the partition by function).</p>
+									</div>
+								</div>
+								</section>
+								<section>
+									<img src="images/1_8.png" alt="" data-position="center center" />
+								<div class="content">
+									<div class="inner">
+										<p>Lastly, I wanted to get the percentage of the population that has been vaccinated per country using the rolling count <b>RollingPeopleVaccinated</b>. We can do this in two ways - using a CTE or using a temp table. In the first method, we have created a CTE <b>PopvsVac</b>, with the columns <b>continent</b>, <b>location</b>, <b>date</b>, <b>population</b> and the <b>new_vaccinations</b> each day, along with the cumulative count of the vaccinations <b>RollingPeopleVaccinated</b>. Then I have calculated the percentage of people who have been vaccinated in each country using <b>(RollingPeopleVaccinated/Population)*100</b>.</p>
+									</div>
+								</div>
+								</section>
+								<section>
+									<img src="images/1_9.png" alt="" data-position="center center" />
+								<div class="content">
+									<div class="inner">
+										<p>In the second method, I have created a temp table <b>PercentPopulationVaccinated</b>, with the columns <b>continent</b>, <b>location</b>, <b>date</b>, <b>population</b>, <b>new_vaccinations</b> and <b>RollingPeopleVaccinated</b>. Then I've again calculated the percentage of the vaccinated population using <b>(RollingPeopleVaccinated/Population)*100</b>.</p>
+									</div>
+								</div>
+								</section>
+
 							</section>
 
+							
 						<!-- Three -->
 							<section id="three">
 								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
 									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
 								</div>
 							</section>
 
